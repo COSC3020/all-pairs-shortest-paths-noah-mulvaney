@@ -4,6 +4,9 @@
 
 function allPairsShortestPaths(graph) {
     const nNodes = graph.length;
+
+    if (nNodes < 2) 
+        return graph[0].length ? [[0]] : [[]];
     
     // initalize dist matrix
     let dist = [];
