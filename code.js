@@ -11,7 +11,7 @@ function allPairsShortestPaths(graph) {
     for (let i = 0; i < nNodes; ++i)
         row.push(Infinity);
     for (let i = 0; i < nNodes; ++i)
-        dist.push(row);
+        dist.push(row.slice()); // must slice to avoid JS reference nightmare
     
     // set dist to self to 0
     for (let i = 0; i < nNodes; ++i)
