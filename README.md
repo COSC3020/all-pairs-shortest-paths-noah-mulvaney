@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2i4vCRmk)
 # All Pairs Shortest Paths
 
 In the lectures, we've seen Dijkstra's algorithm for finding the shortest paths
@@ -26,5 +27,4 @@ the function and run automatically when you commit through a GitHub action.
 
 ## Runtime Analysis
 
-What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
-answer, including your reasoning, to this markdown file.
+My implementation has a complexity of $\Theta(|V|^3)$, using an adjacency matrix with 0 representing no edge. I used 2 loops through the nodes to initalize the distance matrix. I used another loop to set the distance from each node to itself to 0. I used 2 nested loops over the nodes to set the distances equal to the weights. Three nested loops over $V$ are used to find the minimum distance for each pair. This nesting leads to the leading term of $|V|^3$.
